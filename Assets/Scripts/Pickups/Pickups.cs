@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Pickups : MonoBehaviour
 {
-    public abstract void OnTriggerEnter(Collider other);
+    public abstract void OnTriggerEnter(Collider other); // requires all children to have trigger detetion
 
     public virtual void OnPickup()
     {
-        Destroy(gameObject);
+        Destroy(gameObject); // destroy the pickup
     }
 }

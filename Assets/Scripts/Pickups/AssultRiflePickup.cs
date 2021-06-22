@@ -1,28 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AssultRiflePickup : Pickups
 {
-
     public override void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) // if the player walks over the pickup
         {
-            other.GetComponent<Pawn>().weaponUnlock = true;
-            base.OnPickup();
+            other.GetComponent<Pawn>().weaponUnlock = true; // unlock the rifle
+            base.OnPickup(); // destroy the pickup
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

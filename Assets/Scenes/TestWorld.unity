@@ -1196,6 +1196,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 89.186005, y: -30.000002, z: 0}
+--- !u!1 &706412198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1835246099, guid: 3e878258b4afb7941b01b7e882afa5fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 6702240426996840979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &706412200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706412198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e333c56b20a2a4697411c909d3f4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &718414588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,6 +2936,16 @@ PrefabInstance:
       propertyPath: rifle
       value: 
       objectReference: {fileID: 5460240567433309016}
+    - target: {fileID: 3416650258844438315, guid: 8a721147562465b4ca23a9206d92c020,
+        type: 3}
+      propertyPath: mainBullet
+      value: 
+      objectReference: {fileID: 978844621}
+    - target: {fileID: 3416650258844438315, guid: 8a721147562465b4ca23a9206d92c020,
+        type: 3}
+      propertyPath: bulletLifeTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a721147562465b4ca23a9206d92c020, type: 3}
 --- !u!1001 &1768866382
@@ -3623,6 +3651,16 @@ PrefabInstance:
       propertyPath: OnHeal.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1305429236}
+    - target: {fileID: 2074925721652967016, guid: 420edfedd253b4947bfb13d8d435fd59,
+        type: 3}
+      propertyPath: m_Name
+      value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099343741277576536, guid: 420edfedd253b4947bfb13d8d435fd59,
+        type: 3}
+      propertyPath: m_Name
+      value: Rifle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 420edfedd253b4947bfb13d8d435fd59, type: 3}
 --- !u!4 &5006512735886882510 stripped
@@ -3789,6 +3827,11 @@ PrefabInstance:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 978844621}
+    - target: {fileID: 8296172668065077988, guid: 3e878258b4afb7941b01b7e882afa5fe,
+        type: 3}
+      propertyPath: spawnProjectile
+      value: 
+      objectReference: {fileID: 706412200}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e878258b4afb7941b01b7e882afa5fe, type: 3}
 --- !u!1 &8296172668065077985 stripped

@@ -4,47 +4,45 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float bulletLifeTime;
-    public Dummy dummy;
-    public Pawn pawn;
-    public Weapon pistol;
-    public Weapon rifle;
+    public float bulletLifeTime; // how long before the bullet gets destroyed
+    public Dummy dummy; // allows the use of dummy's variables
+    public Pawn pawn; // allows the use of the pawn's variables
 
     void Start()
     {
-        StartCoroutine(Wait());
+        StartCoroutine(Despawn()); // deletes the bullet after set time
     }
 
-    IEnumerator Wait()
+    IEnumerator Despawn()
     {
-        if (gameObject.name.Contains("Clone"))
+        if (gameObject.name.Contains("Clone")) // checks if its a clone
         {
-            yield return new WaitForSeconds(bulletLifeTime);
+            yield return new WaitForSeconds(bulletLifeTime); // waits until bullet life is over
 
-            Destroy(gameObject);
+            Destroy(gameObject); // destroys the bullet
         }
         
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy")) // if the bullet hits the enemy
         {
-            if(pawn.weapon == pistol)
+            if(pawn.weapon == pawn.pistol) // if the player is using the pistol
             {
-                collision.gameObject.GetComponent<Health>().Damage(pistol.bulletDamage);
+                collision.gameObject.GetComponent<Health>().Damage(pawn.pistol.bulletDamage); // deal the pistols damage
             }
             else
             {
-                collision.gameObject.GetComponent<Health>().Damage(rifle.bulletDamage);
+                collision.gameObject.GetComponent<Health>().Damage(pawn.rifle.bulletDamage); // deal the rifles damage
             }
             
-            Destroy(gameObject);
+            Destroy(gameObject); // destroy the bullet
         }
-        if ( collision.gameObject.CompareTag("Player"))
+        if ( collision.gameObject.CompareTag("Player")) // if the bullet hits the player
         {
-            collision.gameObject.GetComponent<Health>().Damage(dummy.bulletDamage);
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<Health>().Damage(dummy.bulletDamage); // deal the dummy's damage
+            Destroy(gameObject); // deatroy the bullet
         }
     }
 }

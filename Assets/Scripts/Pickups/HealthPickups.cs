@@ -1,30 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HealthPickups : Pickups
 {
-
-    [SerializeField] private float healAmount;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private float healAmount; // the amount the pickup will heal
 
     public override void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player")) // checks if the player walked over the pickup
         {
-            other.GetComponent<Health>().Heal(healAmount);
-            base.OnPickup();
+            other.GetComponent<Health>().Heal(healAmount); // heals the player
+            base.OnPickup(); // destroys the pickup
         }
     }
 }
