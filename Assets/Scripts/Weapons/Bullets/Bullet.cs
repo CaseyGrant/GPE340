@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
         }
         if ( collision.gameObject.CompareTag("Player")) // if the bullet hits the player
         {
-            collision.gameObject.GetComponent<Health>().Damage(dummy.bulletDamage); // deal the dummy's damage
+            collision.gameObject.GetComponent<Health>().Damage(pawn.weapon.bulletDamage); // deal the dummy's damage
             Destroy(gameObject); // deatroy the bullet
         }
     }

@@ -9,5 +9,10 @@ public class AssultRiflePickup : Pickups
             other.GetComponent<Pawn>().weaponUnlock = true; // unlock the rifle
             base.OnPickup(); // destroy the pickup
         }
+        if(other.CompareTag("Enemy"))
+        {
+            other.GetComponent<Pawn>().weaponUnlock = true;
+            base.OnPickup();
+        }
     }
 }

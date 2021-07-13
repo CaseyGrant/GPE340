@@ -3,11 +3,11 @@
 public class AudioManager : MonoBehaviour
 {
     public AudioSource source; // what plays the sounds
+    public AudioSource pistolReloadSource;
+    public AudioSource rifleReloadSource;
 
     public AudioClip heal; // what to play when healing
     public AudioClip shoot; // what to play when shooting
-    public AudioClip pistolReload; // what to play when reloading the pistol
-    public AudioClip rifleReload; // what to play when reloading the rifle
 
     public void HealSound()
     {
@@ -21,11 +21,11 @@ public class AudioManager : MonoBehaviour
 
     public void PistolReload()
     {
-        source.PlayOneShot(pistolReload); // plays sound
+        pistolReloadSource.Play(); // plays sound
     }
 
     public void RifleReload()
     {
-        source.PlayOneShot(rifleReload); // plays sound
+        rifleReloadSource.Play(); // plays sound
     }
 }

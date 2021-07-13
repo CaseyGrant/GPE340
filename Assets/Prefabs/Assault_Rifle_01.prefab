@@ -502,5 +502,4 @@ MonoBehaviour:
   magazineSize: 30
   currentAmmo: 30
   canShoot: 1
-  spawnProjectile: {fileID: 0}
-  pawn: {fileID: 0}
+  spawnProjectile: {fileID: 3721433854137805010}

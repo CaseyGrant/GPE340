@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour
     public int magazineSize; // max ammo
     public int currentAmmo; // current ammo
 
-    private bool reloading; // is the gun reloading
+    public bool reloading; // is the gun reloading
     public bool canShoot = true; // stops you from shooting while reloading
 
     public SpawnProjectile spawnProjectile; // allows shooting
@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour
 
     public virtual void Update()
     {
-        if (!GameManager.Instance.GetComponent<AudioManager>().source.isPlaying) // if the audio manager is not playing
+        if (!GameManager.Instance.GetComponent<AudioManager>().pistolReloadSource.isPlaying && !GameManager.Instance.GetComponent<AudioManager>().rifleReloadSource.isPlaying) // if the audio manager is not playing
         {
             reloading = false; // no longer reloading
         }

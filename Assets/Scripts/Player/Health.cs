@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
 
     public void Start()
     {
-        UpdateSlider(); // updates the health sliders
+            UpdateSlider(); // updates the health sliders
     }
 
     public void Update()
@@ -47,6 +47,5 @@ public class Health : MonoBehaviour
     {
         currentHealth = maxHealth; // resets health
         GameManager.Instance.GetComponent<DeathController>().Death(); // kills
-        gameObject.SetActive(false); // makes invisible
     }
 }
