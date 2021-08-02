@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2066068180}
   - component: {fileID: 1999719018}
   - component: {fileID: 1999719019}
+  - component: {fileID: 852951826}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -174,9 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c1905007033634dbe4a04c625d856c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dummy: {fileID: 0}
   player: {fileID: 0}
-  respawnTime: 5
+  enemy: []
+  resetRagdollTime: 3
+  enemySpawner: {fileID: 0}
 --- !u!82 &1999719018
 AudioSource:
   m_ObjectHideFlags: 0
@@ -371,3 +373,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &852951826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159631417956336636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1549b7e1fff99e64b8d34a69ad5a0077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropTable:
+  - itemDrop: {fileID: 6440856186385473734, guid: 125a1ee9d23cad9419166ac2caf88bb5,
+      type: 3}
+    dropWeight: 10
+  - itemDrop: {fileID: 1933875392245327199, guid: a93887d355a64e640b396dc99a368fbf,
+      type: 3}
+    dropWeight: 5

@@ -1728,12 +1728,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 50
+  lives: 1
   health: {fileID: 1853713073}
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  enemySpawner: {fileID: 0}
 --- !u!195 &8296172668065077993
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1791,6 +1793,7 @@ MonoBehaviour:
   pistol: {fileID: 4741542139659244278}
   rifle: {fileID: 1762840428800400410}
   weaponUnlock: 0
+  dead: 0
 --- !u!114 &3555169939228675812
 MonoBehaviour:
   m_ObjectHideFlags: 0

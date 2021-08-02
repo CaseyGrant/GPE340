@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,5 +21,9 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject); // make the game manager persist throughout all scenes
+    }
+    public void EndGame()
+    {
+        SceneManager.LoadScene("MainMenu"); // loads the main menu if you die
     }
 }

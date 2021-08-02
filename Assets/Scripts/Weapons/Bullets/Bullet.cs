@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float bulletLifeTime; // how long before the bullet gets destroyed
-    public Dummy dummy; // allows the use of dummy's variables
     public Pawn pawn; // allows the use of the pawn's variables
 
     void Start()

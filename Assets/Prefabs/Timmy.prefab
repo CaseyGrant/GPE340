@@ -2686,6 +2686,7 @@ GameObject:
   - component: {fileID: 2261813121441593200}
   - component: {fileID: 2261813121441593229}
   - component: {fileID: 1819120388}
+  - component: {fileID: 1819120389}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
@@ -2781,6 +2782,7 @@ MonoBehaviour:
   pistol: {fileID: 265114588395104219}
   rifle: {fileID: 7924798582537897634}
   weaponUnlock: 0
+  dead: 0
 --- !u!114 &2261813121441593229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2795,6 +2797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  lives: 3
   health: {fileID: 0}
   OnHeal:
     m_PersistentCalls:
@@ -2839,6 +2842,18 @@ MonoBehaviour:
   pistolSprite: {fileID: 21300000, guid: d6e4dc2ab496ac845a119b14c5abbb91, type: 3}
   rifleSprite: {fileID: 21300000, guid: 364206cb355dcf7479b2cdec20b8ec68, type: 3}
   ammoCount: {fileID: 0}
+--- !u!114 &1819120389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800936158355485394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2292bb25ecde72a45ab284a922be52f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7853882453406418124
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,16 +3164,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol
       objectReference: {fileID: 0}
-    - target: {fileID: 2075723320295332112, guid: 09520b3a11d98074da6e7229771764f8,
-        type: 3}
-      propertyPath: bulletSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2075723320295332112, guid: 09520b3a11d98074da6e7229771764f8,
-        type: 3}
-      propertyPath: pawn
-      value: 
-      objectReference: {fileID: 2261813121441593200}
     - target: {fileID: 261903944638351253, guid: 09520b3a11d98074da6e7229771764f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3214,6 +3219,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2075723320295332112, guid: 09520b3a11d98074da6e7229771764f8,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075723320295332112, guid: 09520b3a11d98074da6e7229771764f8,
+        type: 3}
+      propertyPath: pawn
+      value: 
+      objectReference: {fileID: 2261813121441593200}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09520b3a11d98074da6e7229771764f8, type: 3}
 --- !u!4 &2072196019333085534 stripped
@@ -3257,11 +3272,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5005181642706720595, guid: 599d8763b5068f14f9fc745bf840b3c3,
-        type: 3}
-      propertyPath: pawn
-      value: 
-      objectReference: {fileID: 2261813121441593200}
     - target: {fileID: 8945261107261528471, guid: 599d8763b5068f14f9fc745bf840b3c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3317,20 +3327,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5005181642706720595, guid: 599d8763b5068f14f9fc745bf840b3c3,
+        type: 3}
+      propertyPath: pawn
+      value: 
+      objectReference: {fileID: 2261813121441593200}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599d8763b5068f14f9fc745bf840b3c3, type: 3}
---- !u!4 &6101396631730980966 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8945261107261528471, guid: 599d8763b5068f14f9fc745bf840b3c3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2922678368403444209}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &588170676443071613 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2352825555966432652, guid: 599d8763b5068f14f9fc745bf840b3c3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2922678368403444209}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7924798582537897634 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5005181642706720595, guid: 599d8763b5068f14f9fc745bf840b3c3,
@@ -3343,3 +3346,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8a8ef8e152fef45a85d9496c95c8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &588170676443071613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2352825555966432652, guid: 599d8763b5068f14f9fc745bf840b3c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2922678368403444209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6101396631730980966 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8945261107261528471, guid: 599d8763b5068f14f9fc745bf840b3c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2922678368403444209}
+  m_PrefabAsset: {fileID: 0}

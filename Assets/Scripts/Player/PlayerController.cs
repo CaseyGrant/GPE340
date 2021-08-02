@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pawn = GetComponent<Pawn>();
-        anim = GetComponent<Animator>();
+        pawn = GetComponent<Pawn>(); // gets the pawn
+        anim = GetComponent<Animator>(); // gets the animator
     }
 
     // Update is called once per frame
