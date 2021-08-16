@@ -24,6 +24,8 @@ public class Weapon : MonoBehaviour
     public SpawnProjectile spawnProjectile; // allows shooting
     public Pawn pawn; // allows access to pawn variables
 
+    public GameObject fire;
+
     public virtual void Update()
     {
         if (!GameManager.Instance.GetComponent<AudioManager>().pistolReloadSource.isPlaying && !GameManager.Instance.GetComponent<AudioManager>().rifleReloadSource.isPlaying) // if the audio manager is not playing
@@ -90,7 +92,14 @@ public class Weapon : MonoBehaviour
             if (timer == firerate) // after shooting
             {
                 GameManager.Instance.GetComponent<AudioManager>().Shoot(); // play shoot
+                ParticleEvent(); // makes a particle
             }
         }
+    }
+
+    public void ParticleEvent()
+    {
+        GameObject particle = Instantiate(fire, spawnProjectile.transform); // spawns a particle
+        particle.GetComponent<ParticleSystem>().Play(); // activates the particle
     }
 }

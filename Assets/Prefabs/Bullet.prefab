@@ -124,7 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletLifeTime: -10
-  dummy: {fileID: 0}
   pawn: {fileID: 0}
-  pistol: {fileID: 0}
-  rifle: {fileID: 0}
+  spark: {fileID: 1612221337289516, guid: 85ab2ba31682fca4e9c1e40ea154ee43, type: 3}
+  electric: {fileID: 1058325498707994, guid: 8333d50130027574ca8b4e0268fdd047, type: 3}

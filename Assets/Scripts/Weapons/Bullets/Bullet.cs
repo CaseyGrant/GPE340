@@ -7,9 +7,15 @@ public class Bullet : MonoBehaviour
     public float bulletLifeTime; // how long before the bullet gets destroyed
     public Pawn pawn; // allows the use of the pawn's variables
 
+    public GameObject spark;
+    public GameObject electric;
+
     void Start()
     {
         StartCoroutine(Despawn()); // deletes the bullet after set time
+
+        GameObject particles = Instantiate(spark, gameObject.transform);
+        particles.GetComponent<ParticleSystem>().Play();
     }
 
     IEnumerator Despawn()
@@ -25,6 +31,9 @@ public class Bullet : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
+        GameObject particles = Instantiate(electric, gameObject.transform.position, Quaternion.identity); // spawns a particle
+        particles.GetComponent<ParticleSystem>().Play(); // activates the particle
+
         if (collision.gameObject.CompareTag("Enemy")) // if the bullet hits the enemy
         {
             if(pawn.weapon == pawn.pistol) // if the player is using the pistol

@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Master
+  - Music
+  - SFX
+  - Fullscreen
+  - Resolution
+  - Quality
   layers:
   - Default
   - TransparentFX

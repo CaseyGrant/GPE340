@@ -152,9 +152,11 @@ MonoBehaviour:
   timer: 0
   magazineSize: 15
   currentAmmo: 15
+  reloading: 0
   canShoot: 1
   spawnProjectile: {fileID: 265114587304356775}
   pawn: {fileID: 0}
+  fire: {fileID: 1372040286346358, guid: 53ebac442b16db64f9177d0c749cbb06, type: 3}
 --- !u!1 &263478992902522345
 GameObject:
   m_ObjectHideFlags: 0
